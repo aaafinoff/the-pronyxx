@@ -1,0 +1,73 @@
+{
+  "_note": "ВРЕМЕННЫЙ roadmap-заглушка. Три колонки: done (сделано), now (сейчас), next (дальше). direction — id направления.",
+  "columns": [
+    {
+      "id": "done",
+      "title": "Сделано",
+      "items": [
+        {
+          "title": "Prism Realm открыт",
+          "direction": "prism",
+          "text": "Сервер работает и принимает игроков."
+        },
+        {
+          "title": "PrismCore 1.0",
+          "direction": "prism",
+          "text": "Общее ядро для всех плагинов Prism."
+        },
+        {
+          "title": "Сайт студии",
+          "direction": "apps",
+          "text": "Все страницы сайта собраны и работают."
+        }
+      ]
+    },
+    {
+      "id": "now",
+      "title": "Сейчас",
+      "items": [
+        {
+          "title": "PrismHub",
+          "direction": "prism",
+          "text": "Хаб, который соединит все режимы."
+        },
+        {
+          "title": "PrismVisuals",
+          "direction": "prism",
+          "text": "Эффекты и единый визуальный стиль."
+        },
+        {
+          "title": "Pronyxx Send",
+          "direction": "security",
+          "text": "Безопасная передача файлов."
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "title": "Дальше",
+      "items": [
+        {
+          "title": "Сайт v1.0",
+          "direction": "apps",
+          "text": "Живая статистика, админка, API и свой домен."
+        },
+        {
+          "title": "Pronyxx 2FA и Shield",
+          "direction": "security",
+          "text": "Двухфакторная авторизация и защита сервисов."
+        },
+        {
+          "title": "PrismPanel и PrismHost",
+          "direction": "prism",
+          "text": "Панель управления и хостинг."
+        },
+        {
+          "title": "Мобильное приложение",
+          "direction": "apps",
+          "text": "The Pronyxx для iPhone и Android."
+        }
+      ]
+    }
+  ]
+}

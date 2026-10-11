@@ -1,0 +1,444 @@
+/* ==========================================================
+   components.css — «кирпичики», из которых собраны страницы:
+   шапка, подвал, кнопки, карточки, значки статуса.
+   Цвета — только через переменные из base.css.
+   ========================================================== */
+
+/* ---------- Шапка ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: var(--header-h);
+}
+
+/* Логотип: высота задана, ширина подстраивается сама */
+.brand {
+  display: inline-flex;
+  min-width: 0; /* на очень узком экране логотип может сжаться, а не вытолкнуть меню */
+}
+.brand img {
+  height: 48px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+  transition: filter 0.3s;
+}
+.brand:hover img {
+  filter: drop-shadow(0 0 10px rgba(var(--glow), 0.5));
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+}
+.nav a {
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 500;
+  transition: color 0.2s, background 0.2s;
+}
+.nav a:hover {
+  color: var(--text);
+  background: var(--tint);
+}
+.nav a[aria-current="page"] {
+  color: var(--text);
+  background: var(--tint-strong);
+}
+
+/* Кнопка-«бургер» видна только на телефоне */
+.burger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.burger span,
+.burger span::before,
+.burger span::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--text);
+  border-radius: 2px;
+}
+.burger span {
+  position: relative;
+}
+.burger span::before,
+.burger span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.burger span::before { top: -6px; }
+.burger span::after { top: 6px; }
+
+@media (max-width: 760px) {
+  .brand img {
+    height: 40px;
+  }
+  .burger {
+    display: block;
+  }
+  .nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    padding: 12px 20px 18px;
+    background: var(--bg-solid);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav.is-open {
+    display: flex;
+  }
+  .nav a {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Подвал ---------- */
+.site-footer {
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+  background: var(--bg-glass);
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+  padding: 44px 0 28px;
+}
+
+.site-footer h3 {
+  margin-bottom: 12px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.site-footer li {
+  margin-bottom: 8px;
+}
+.site-footer li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-soft);
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.site-footer li a:hover {
+  color: var(--text);
+  text-shadow: 0 0 14px rgba(var(--glow), 0.6);
+}
+
+.site-footer__logo {
+  width: min(100%, 300px);
+  margin-left: -8px;
+}
+
+.site-footer__about p {
+  margin-top: 8px;
+  max-width: 34ch;
+  color: var(--muted);
+}
+
+.site-footer__bottom {
+  padding: 18px 0 28px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* Маленький значок направления в подвале */
+.dir-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.soon {
+  color: var(--muted);
+}
+.soon small {
+  margin-left: 6px;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.72rem;
+}
+
+@media (max-width: 760px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+
+/* ---------- Кнопки ---------- */
+/* Главная кнопка — белая с чёрным текстом */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border: 1px solid var(--btn-bg);
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s, border-color 0.3s;
+}
+/* При наведении — мягкое белое свечение, как у луча в логотипе */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(var(--glow), 0.55), 0 0 44px rgba(var(--glow), 0.3);
+}
+
+/* Второстепенная кнопка — прозрачная с белой рамкой */
+.btn--ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+.btn--ghost:hover {
+  border-color: var(--text);
+  box-shadow: 0 0 12px rgba(var(--glow), 0.3), 0 0 36px rgba(var(--glow), 0.18);
+}
+
+/* ---------- Карточка ---------- */
+.card {
+  position: relative;
+  display: block;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+/* Свечение, которое идёт за мышкой. --mx и --my — координаты курсора,
+   их ставит JavaScript (js/core/layout.js). */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(var(--glow), 0.1), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+/* Рамка с бегущим бликом. Хитрость с mask: закрашиваем всё градиентом,
+   а потом «вырезаем» середину — остаётся только рамка в 1 пиксель. */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: var(--shine);
+  background-size: 200% 100%;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+a.card:hover,
+.card--hover:hover {
+  transform: translateY(-4px);
+  border-color: transparent;
+}
+a.card:hover::before,
+a.card:hover::after,
+.card--hover:hover::before,
+.card--hover:hover::after {
+  opacity: 1;
+}
+a.card:hover::after,
+.card--hover:hover::after {
+  animation: shimmer 3s linear infinite;
+}
+
+.card > * {
+  position: relative; /* текст лежит поверх свечения */
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.card__label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.card__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+/* ---------- Значок статуса ---------- */
+/* Статусы различаются не цветом, а формой точки:
+   работает — яркая белая точка, в разработке — белое колечко, в планах — серая точка. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--tint);
+  color: var(--text-soft);
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.badge__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.badge--live {
+  color: var(--text);
+}
+.badge--live .badge__dot {
+  background: var(--text);
+  box-shadow: 0 0 10px rgba(var(--glow), 0.9);
+}
+.badge--dev .badge__dot {
+  border: 2px solid var(--text);
+}
+.badge--planned .badge__dot {
+  background: var(--dim);
+}
+
+/* ---------- Картинка проекта (или заглушка «скоро») ---------- */
+.thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thumb__soon {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 3px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--bg-glass);
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-card .thumb {
+  margin-bottom: 18px;
+}
+
+/* ---------- Чипы (технологии, фильтры) ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--tint);
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+a.chip,
+button.chip {
+  cursor: pointer;
+  color: var(--muted);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+a.chip:hover,
+button.chip:hover {
+  color: var(--text);
+  border-color: var(--line-strong);
+}
+/* Выбранный фильтр — белый с чёрным текстом */
+button.chip[aria-pressed="true"] {
+  color: var(--btn-text);
+  border-color: var(--btn-bg);
+  background: var(--btn-bg);
+  font-weight: 600;
+}
+
+/* ---------- Сообщения (ошибка загрузки, «ничего не найдено») ---------- */
+.notice {
+  padding: 28px;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+  color: var(--muted);
+  text-align: center;
+}
+.notice strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+}

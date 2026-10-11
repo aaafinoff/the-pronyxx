@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Политика безопасности: браузер загрузит скрипты и стили только с нашего сайта (и шрифты с Google Fonts). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <title>The Pronyxx — студия игр, безопасности и приложений</title>
+  <meta name="description" content="The Pronyxx — студия, которая делает игры, сервисы безопасности, приложения и сайты. Создаём миры и защищаем их.">
+  <meta name="theme-color" content="#050505">
+
+  <!-- Иконки вкладки браузера и иконка для экрана «Домой» на iPhone -->
+  <link rel="icon" href="images/icons/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+
+  <!-- Карточка-превью, когда ссылку кидают в Telegram, Discord и соцсети.
+       Картинке нужен ПОЛНЫЙ адрес. Если сайт переедет на свой домен — поменяй адрес здесь. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Pronyxx">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="The Pronyxx — студия игр, безопасности и приложений">
+  <meta property="og:description" content="The Pronyxx — студия, которая делает игры, сервисы безопасности, приложения и сайты. Создаём миры и защищаем их.">
+  <meta property="og:image" content="https://aaafinoff.github.io/the-pronyxx/images/social/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Логотип The Pronyxx: кристалл с лучом и надпись Games. Security. Apps.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Pronyxx — студия игр, безопасности и приложений">
+  <meta name="twitter:description" content="The Pronyxx — студия, которая делает игры, сервисы безопасности, приложения и сайты. Создаём миры и защищаем их.">
+  <meta name="twitter:image" content="https://aaafinoff.github.io/the-pronyxx/images/social/og-preview.png">
+  <meta name="twitter:image:alt" content="Логотип The Pronyxx: кристалл с лучом и надпись Games. Security. Apps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@500;700&display=swap">
+  <!-- Фон первого экрана нужен сразу — просим браузер скачать его пораньше -->
+  <link rel="preload" as="image" href="images/backgrounds/hero-beam.webp" type="image/webp">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержимому</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main">
+    <!-- 1. Первый экран -->
+    <!-- Фон с лучом задан в css/pages.css. Заголовок стоит над лучом, кнопки — под ним. -->
+    <section class="hero">
+      <div class="container hero__top">
+        <h1 class="shine-text">The Pronyxx</h1>
+        <p class="hero__slogan" id="hero-slogan">Создаём миры и защищаем их</p>
+      </div>
+      <div class="container hero__bottom">
+        <div class="hero__actions">
+          <a class="btn" href="projects.html">Наши проекты</a>
+          <a class="btn btn--ghost" href="about.html">О студии</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Направления -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Студия, а не один проект</span>
+            <h2>Три направления</h2>
+          </div>
+        </div>
+        <div class="grid grid--3" id="directions"></div>
+      </div>
+    </section>
+
+    <!-- 3. Флагманские проекты -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Главное</span>
+            <h2>Флагманские проекты</h2>
+          </div>
+          <a class="more-link" href="projects.html">Все проекты →</a>
+        </div>
+        <div class="grid grid--3" id="flagships"></div>
+      </div>
+    </section>
+
+    <!-- 4. Цифры студии -->
+    <section class="section">
+      <div class="container">
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <!-- 5. Последние новости -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Что нового</span>
+            <h2>Последние новости</h2>
+          </div>
+          <a class="more-link" href="news.html">Все новости →</a>
+        </div>
+        <div class="grid grid--3" id="news"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <noscript><p class="container">Для работы сайта нужен JavaScript.</p></noscript>
+  <script type="module" src="js/pages/home.js"></script>
+</body>
+</html>

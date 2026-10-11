@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <title>Новость — The Pronyxx</title>
+  <meta name="theme-color" content="#050505">
+
+  <!-- Иконки вкладки браузера и иконка для экрана «Домой» на iPhone -->
+  <link rel="icon" href="images/icons/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+
+  <!-- Карточка-превью, когда ссылку кидают в Telegram, Discord и соцсети.
+       Картинке нужен ПОЛНЫЙ адрес. Если сайт переедет на свой домен — поменяй адрес здесь. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Pronyxx">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Новость — The Pronyxx">
+  <meta property="og:description" content="The Pronyxx — студия, которая делает игры, сервисы безопасности, приложения и сайты.">
+  <meta property="og:image" content="https://aaafinoff.github.io/the-pronyxx/images/social/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Логотип The Pronyxx: кристалл с лучом и надпись Games. Security. Apps.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Новость — The Pronyxx">
+  <meta name="twitter:description" content="The Pronyxx — студия, которая делает игры, сервисы безопасности, приложения и сайты.">
+  <meta name="twitter:image" content="https://aaafinoff.github.io/the-pronyxx/images/social/og-preview.png">
+  <meta name="twitter:image:alt" content="Логотип The Pronyxx: кристалл с лучом и надпись Games. Security. Apps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержимому</a>
+  <header id="site-header" class="site-header"></header>
+
+  <!-- Одна страница на все новости: post.html?id=site-launch -->
+  <main id="main"></main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <noscript><p class="container">Для работы сайта нужен JavaScript.</p></noscript>
+  <script type="module" src="js/pages/post.js"></script>
+</body>
+</html>

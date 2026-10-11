@@ -1,0 +1,466 @@
+/* ==========================================================
+   pages.css — стили отдельных страниц.
+   Цвета — только через переменные из base.css.
+   ========================================================== */
+
+/* ---------- Главная: первый экран ---------- */
+/* Фон — чёрный камень с белым лучом ровно посередине картинки.
+   Экран разделён на две равные половины: заголовок прижат к низу верхней
+   (стоит НАД лучом), кнопки прижаты к верху нижней (стоят ПОД лучом). */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  min-height: calc(100vh - var(--header-h));
+  min-height: calc(100svh - var(--header-h)); /* svh — честная высота экрана на телефоне */
+  text-align: center;
+  background: var(--bg) url("../images/backgrounds/hero-beam.webp") center / cover no-repeat;
+}
+
+/* Плавный переход от картинки к фону страницы внизу */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 140px;
+  background: linear-gradient(transparent, var(--bg));
+  pointer-events: none;
+}
+
+.hero__top {
+  align-self: end;
+  padding: 40px 0 38px;
+}
+
+.hero__bottom {
+  position: relative;
+  z-index: 1;
+  align-self: start;
+  padding: 46px 0 40px;
+}
+
+.hero h1 {
+  padding-left: 0.26em; /* уравновешивает расстояние после последней буквы */
+  font-size: clamp(1.45rem, 6.2vw, 4rem);
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  animation: shimmer 9s linear infinite;
+}
+
+.hero__slogan {
+  margin: 16px auto 0;
+  max-width: 30ch;
+  color: var(--text-soft);
+  font-size: clamp(1rem, 2.4vw, 1.3rem);
+}
+
+.hero__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- Главная: карточки направлений ---------- */
+.direction-card {
+  padding: 26px;
+}
+/* Значок направления — единственное цветное место на сайте */
+.direction-card__icon {
+  width: 128px;
+  height: 128px;
+  margin: -6px 0 10px -22px;
+  transition: transform 0.4s, filter 0.4s;
+}
+.direction-card:hover .direction-card__icon {
+  transform: scale(1.06);
+  filter: brightness(1.2);
+}
+.direction-card h3 {
+  font-size: 1.25rem;
+}
+.direction-card__count {
+  display: block;
+  margin-top: 18px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ---------- Главная: цифры студии ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+.stat__num {
+  display: block;
+  font-family: var(--font-head);
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.stat__label {
+  color: var(--muted);
+}
+@media (max-width: 700px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Шапка внутренних страниц ---------- */
+.page-hero {
+  padding: 64px 0 28px;
+}
+.page-hero h1 {
+  font-size: clamp(1.8rem, 5.4vw, 3.2rem);
+}
+.page-hero__lead {
+  margin-top: 16px;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+.page-hero__meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Шапка страницы с картинкой справа (логотип на «О студии», значок на странице направления) */
+.page-hero--split .container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+.page-hero__art {
+  width: 340px;
+}
+.page-hero__art--icon {
+  width: 220px;
+}
+@media (max-width: 860px) {
+  .page-hero--split .container {
+    grid-template-columns: 1fr;
+  }
+  .page-hero__art {
+    order: -1; /* на телефоне картинка встаёт над заголовком */
+    width: min(100%, 300px);
+    margin-inline: auto;
+  }
+  .page-hero__art--icon {
+    width: 170px;
+    margin-inline: 0;
+    margin-left: -30px;
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.breadcrumbs a:hover {
+  color: var(--text);
+}
+
+.filters {
+  margin-bottom: 28px;
+}
+
+/* ---------- Страница проекта и новости: блоки с текстом ---------- */
+.block {
+  margin-top: 44px;
+}
+.block h2 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.prose {
+  max-width: 68ch;
+}
+.prose p {
+  margin-bottom: 1em;
+  color: var(--text-soft);
+  font-size: 1.06rem;
+}
+
+.shots {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.shots--empty {
+  grid-template-columns: minmax(0, 520px);
+}
+
+/* История версий */
+.versions li {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.versions__ver {
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--text);
+}
+.versions__date {
+  display: block;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+.versions p {
+  color: var(--text-soft);
+}
+
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------- Новости ---------- */
+.news-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.news-card__type {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ---------- Roadmap ---------- */
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.roadmap__col {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--tint);
+}
+.roadmap__col h2 {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+}
+/* Колонка «Сейчас» выделена белой рамкой и свечением */
+.roadmap__col--now {
+  border-color: var(--line-strong);
+  box-shadow: 0 0 40px rgba(var(--glow), 0.08);
+}
+.roadmap__col--done h2,
+.roadmap__col--next h2 {
+  color: var(--muted);
+}
+.roadmap__item {
+  margin-bottom: 12px;
+  padding: 16px 16px 16px 18px;
+  border-left: 2px solid var(--dim);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.roadmap__col--now .roadmap__item {
+  border-left-color: var(--text);
+}
+.roadmap__item:last-child {
+  margin-bottom: 0;
+}
+.roadmap__item h3 {
+  margin-bottom: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.roadmap__item p {
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+@media (max-width: 860px) {
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- О студии ---------- */
+.timeline {
+  position: relative;
+  max-width: 720px;
+  padding-left: 30px;
+}
+/* Вертикальная линия — как луч: яркая сверху, гаснет книзу */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(var(--text), var(--dim));
+}
+.timeline li {
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--text);
+  border-radius: 50%;
+  background: var(--bg);
+}
+.timeline__year {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.timeline h3 {
+  margin: 4px 0 6px;
+  font-size: 1.1rem;
+}
+.timeline p {
+  color: var(--muted);
+}
+
+.founder {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.founder__avatar {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--bg);
+}
+.founder__avatar img {
+  width: 84%;
+}
+.founder h3 {
+  font-size: 1.3rem;
+}
+.founder__role {
+  margin: 4px 0 14px;
+  color: var(--text-soft);
+}
+.founder__group {
+  margin-top: 18px;
+}
+.founder__group h4 {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+@media (max-width: 620px) {
+  .founder {
+    grid-template-columns: 1fr;
+  }
+  .founder__avatar {
+    width: 120px;
+  }
+}
+
+/* ---------- Контакты ---------- */
+.contacts {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+@media (max-width: 860px) {
+  .contacts {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form .field {
+  margin-bottom: 18px;
+}
+.form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--bg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--text);
+  box-shadow: 0 0 0 3px rgba(var(--glow), 0.18);
+}
+/* Ошибка без красного: яркая белая рамка + значок «!» перед текстом ошибки */
+.form [aria-invalid="true"] {
+  border: 2px solid var(--text);
+}
+.field__error {
+  min-height: 1.3em;
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+.field__error:not(:empty)::before {
+  content: "! ";
+  font-weight: 700;
+}
+.form__status {
+  margin-top: 14px;
+  color: var(--muted);
+}
+.form__status--ok {
+  color: var(--text);
+}
+
+.social-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.social-list li:last-child {
+  border-bottom: 0;
+}
+.social-list a {
+  transition: text-shadow 0.2s;
+}
+.social-list a:hover {
+  text-shadow: 0 0 14px rgba(var(--glow), 0.6);
+}

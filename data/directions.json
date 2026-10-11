@@ -1,0 +1,26 @@
+{
+  "_note": "Три направления студии. id используется в адресах страниц и в projects.json — не меняй его без нужды. icon — путь к цветному значку направления.",
+  "directions": [
+    {
+      "id": "prism",
+      "name": "Prism",
+      "tagline": "Всё про Minecraft",
+      "description": "Игровое направление студии: сервер Prism Realm и всё, что его окружает — визуал, хаб, защита, ядро, панель управления и хостинг.",
+      "icon": "images/directions/prism.webp"
+    },
+    {
+      "id": "security",
+      "name": "Pronyxx Security",
+      "tagline": "Сервисы безопасности",
+      "description": "Инструменты, которые защищают людей и их данные: безопасная передача файлов, двухфакторная авторизация и защита сервисов.",
+      "icon": "images/directions/security.webp"
+    },
+    {
+      "id": "apps",
+      "name": "Pronyxx Apps",
+      "tagline": "Приложения и сайты",
+      "description": "Сайты и приложения студии — от этого сайта до будущего мобильного приложения The Pronyxx.",
+      "icon": "images/directions/apps.webp"
+    }
+  ]
+}

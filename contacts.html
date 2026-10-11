@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <title>Контакты — The Pronyxx</title>
+  <meta name="description" content="Связаться со студией The Pronyxx: форма связи и соцсети.">
+  <meta name="theme-color" content="#050505">
+
+  <!-- Иконки вкладки браузера и иконка для экрана «Домой» на iPhone -->
+  <link rel="icon" href="images/icons/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+
+  <!-- Карточка-превью, когда ссылку кидают в Telegram, Discord и соцсети.
+       Картинке нужен ПОЛНЫЙ адрес. Если сайт переедет на свой домен — поменяй адрес здесь. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Pronyxx">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Контакты — The Pronyxx">
+  <meta property="og:description" content="Связаться со студией The Pronyxx: форма связи и соцсети.">
+  <meta property="og:image" content="https://aaafinoff.github.io/the-pronyxx/images/social/og-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Логотип The Pronyxx: кристалл с лучом и надпись Games. Security. Apps.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Контакты — The Pronyxx">
+  <meta name="twitter:description" content="Связаться со студией The Pronyxx: форма связи и соцсети.">
+  <meta name="twitter:image" content="https://aaafinoff.github.io/the-pronyxx/images/social/og-preview.png">
+  <meta name="twitter:image:alt" content="Логотип The Pronyxx: кристалл с лучом и надпись Games. Security. Apps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Unbounded:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержимому</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Контакты</span>
+        <h1>Напиши нам</h1>
+        <p class="page-hero__lead">Идеи, вопросы, предложения о сотрудничестве — всё сюда.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contacts">
+        <!-- novalidate выключает стандартные подсказки браузера: поля проверяет наш скрипт и пишет ошибки по-русски -->
+        <form class="card form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="60" aria-describedby="name-error">
+            <div class="field__error" id="name-error" role="alert"></div>
+          </div>
+          <div class="field">
+            <label for="email">Твоя почта</label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="100" aria-describedby="email-error">
+            <div class="field__error" id="email-error" role="alert"></div>
+          </div>
+          <div class="field">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" maxlength="2000" aria-describedby="message-error"></textarea>
+            <div class="field__error" id="message-error" role="alert"></div>
+          </div>
+          <button class="btn" type="submit">Написать</button>
+          <p class="form__status" id="form-status" role="status"></p>
+        </form>
+
+        <div class="card reveal">
+          <span class="card__label">Соцсети</span>
+          <ul class="social-list" id="socials"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+  <noscript><p class="container">Для работы сайта нужен JavaScript.</p></noscript>
+  <script type="module" src="js/pages/contacts.js"></script>
+</body>
+</html>
