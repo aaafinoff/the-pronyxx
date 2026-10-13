@@ -1,5 +1,5 @@
 {
-  "_note": "Поля: status = live | dev | planned; flagship = показывать на главной; image и screenshots = пути к картинкам, например images/projects/pronyxx-onyx.webp (пусто = заглушка «скоро»); links = [{ \"label\": \"...\", \"url\": \"https://...\" }]. Проекты «Заглушка ...» — места под будущие проекты Prism. Тексты у Security и Apps пока временные.",
+  "_note": "Поля: status = live | dev | planned; flagship = показывать на главной; image и screenshots = пути к картинкам, например images/projects/pronyxx-onyx.webp (пусто = заглушка «скоро»); links = [{ \"label\": \"...\", \"url\": \"https://...\" }]. Проекты «Заглушка ...» — места под будущие проекты Prism.",
   "projects": [
     {
       "id": "pronyxx-onyx",
@@ -7,8 +7,8 @@
       "direction": "prism",
       "status": "planned",
       "flagship": true,
-      "short": "Minecraft-сервер студии. Разработка начинается 15 октября 2026 года.",
-      "description": "Pronyxx Onyx — Minecraft-сервер студии The Pronyxx. Он пока не запущен: разработка начинается 15 октября 2026 года. Подробности появятся здесь по мере работы.",
+      "short": "Minecraft-сервер студии. Разработка — с 15 октября 2026 года, открытие — 1 июля 2027 года.",
+      "description": "Pronyxx Onyx — Minecraft-сервер студии The Pronyxx. Разработка начинается 15 октября 2026 года, открытие для игроков запланировано на 1 июля 2027 года. Режим сервера пока не раскрывается — подробности появятся по мере работы.",
       "tech": [],
       "image": "",
       "screenshots": [],
@@ -107,10 +107,7 @@
       "flagship": false,
       "short": "Безопасная передача файлов и сообщений.",
       "description": "Pronyxx Send — сервис, чтобы безопасно отправить файл или сообщение: ссылка работает ограниченное время, а содержимое зашифровано.",
-      "tech": [
-        "JavaScript",
-        "Web Crypto API"
-      ],
+      "tech": [],
       "image": "",
       "screenshots": [],
       "versions": [],
@@ -124,10 +121,7 @@
       "flagship": false,
       "short": "Двухфакторная авторизация для аккаунтов.",
       "description": "Pronyxx 2FA добавляет второй шаг входа — одноразовый код. Даже если пароль украли, без кода войти не получится.",
-      "tech": [
-        "TOTP",
-        "JavaScript"
-      ],
+      "tech": [],
       "image": "",
       "screenshots": [],
       "versions": [],
@@ -141,10 +135,7 @@
       "flagship": false,
       "short": "Защита сайтов и сервисов от атак.",
       "description": "Pronyxx Shield будет защищать сайты и сервисы студии от ботов и атак.",
-      "tech": [
-        "Linux",
-        "Nginx"
-      ],
+      "tech": [],
       "image": "",
       "screenshots": [],
       "versions": [],
@@ -183,10 +174,7 @@
       "flagship": false,
       "short": "Карман студии для iPhone и Android.",
       "description": "Мобильное приложение: новости, проекты, статус серверов и уведомления. Начнём после сайта v1.0.",
-      "tech": [
-        "React Native",
-        "Expo"
-      ],
+      "tech": [],
       "image": "",
       "screenshots": [],
       "versions": [],
