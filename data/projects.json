@@ -1,64 +1,15 @@
 {
-  "_note": "ВРЕМЕННЫЕ ТЕКСТЫ. Описания, технологии, версии и статусы написаны как заглушки — замени на настоящие. Поля: status = live | dev | planned; flagship = показывать на главной; image и screenshots = пути к картинкам, например images/projects/prism-realm.webp (пусто = заглушка «скоро»); links = [{ \"label\": \"...\", \"url\": \"https://...\" }].",
+  "_note": "Поля: status = live | dev | planned; flagship = показывать на главной; image и screenshots = пути к картинкам, например images/projects/pronyxx-onyx.webp (пусто = заглушка «скоро»); links = [{ \"label\": \"...\", \"url\": \"https://...\" }]. Проекты «Заглушка ...» — места под будущие проекты Prism. Тексты у Security и Apps пока временные.",
   "projects": [
     {
-      "id": "prism-realm",
-      "name": "Prism Realm",
+      "id": "pronyxx-onyx",
+      "name": "Pronyxx Onyx",
       "direction": "prism",
-      "status": "live",
+      "status": "planned",
       "flagship": true,
-      "short": "Minecraft-сервер студии — мир, с которого всё началось.",
-      "description": "Prism Realm — главный игровой сервер студии. Здесь появляются новые режимы, ивенты и идеи, которые потом превращаются в отдельные проекты Prism.",
-      "tech": ["Java", "Paper", "MySQL"],
-      "image": "",
-      "screenshots": [],
-      "versions": [
-        { "version": "1.0", "date": "2026-06-01", "notes": "Открытие сервера." },
-        { "version": "1.1", "date": "2026-09-10", "notes": "Новые ивенты и исправления." }
-      ],
-      "links": []
-    },
-    {
-      "id": "prism-visuals",
-      "name": "PrismVisuals",
-      "direction": "prism",
-      "status": "dev",
-      "flagship": true,
-      "short": "Визуальный стиль Prism: эффекты, интерфейс и оформление.",
-      "description": "PrismVisuals отвечает за то, как выглядят проекты Prism: эффекты, меню, иконки и общий призматический стиль.",
-      "tech": ["Java", "Resource Pack", "GLSL"],
-      "image": "",
-      "screenshots": [],
-      "versions": [
-        { "version": "0.2", "date": "2026-08-20", "notes": "Первые эффекты и набор иконок." }
-      ],
-      "links": []
-    },
-    {
-      "id": "prism-hub",
-      "name": "PrismHub",
-      "direction": "prism",
-      "status": "dev",
-      "flagship": true,
-      "short": "Центральный хаб, который соединяет все проекты Prism.",
-      "description": "PrismHub — точка входа в мир Prism: отсюда игроки попадают на режимы, видят новости и свой профиль.",
-      "tech": ["Java", "Velocity", "Redis"],
-      "image": "",
-      "screenshots": [],
-      "versions": [
-        { "version": "0.1", "date": "2026-07-15", "notes": "Прототип хаба." }
-      ],
-      "links": []
-    },
-    {
-      "id": "prism-guard",
-      "name": "PrismGuard",
-      "direction": "prism",
-      "status": "dev",
-      "flagship": false,
-      "short": "Защита серверов Prism от читов и нарушителей.",
-      "description": "PrismGuard следит за честной игрой: ловит читы, подозрительные действия и помогает модераторам.",
-      "tech": ["Java", "Paper API"],
+      "short": "Minecraft-сервер студии. Разработка начинается 15 октября 2026 года.",
+      "description": "Pronyxx Onyx — Minecraft-сервер студии The Pronyxx. Он пока не запущен: разработка начинается 15 октября 2026 года. Подробности появятся здесь по мере работы.",
+      "tech": [],
       "image": "",
       "screenshots": [],
       "versions": [],
@@ -69,26 +20,66 @@
       "name": "PrismCore",
       "direction": "prism",
       "status": "live",
-      "flagship": false,
-      "short": "Общее ядро, на котором работают плагины Prism.",
-      "description": "PrismCore — общая основа для всех плагинов Prism: база данных, команды, настройки и полезные инструменты в одном месте.",
-      "tech": ["Java", "Gradle", "MySQL"],
+      "flagship": true,
+      "short": "Общее ядро, на котором работают плагины студии.",
+      "description": "PrismCore — общая основа для плагинов студии: то, что нужно каждому плагину, собрано в одном месте.",
+      "tech": [],
       "image": "",
       "screenshots": [],
-      "versions": [
-        { "version": "1.0", "date": "2026-05-20", "notes": "Первая стабильная версия ядра." }
-      ],
+      "versions": [],
+      "links": []
+    },
+    {
+      "id": "prism-visuals",
+      "name": "Заглушка Visuals",
+      "direction": "prism",
+      "status": "planned",
+      "flagship": false,
+      "short": "Проект в планах. Описание появится позже.",
+      "description": "Это заглушка: проект пока только в планах. Когда начнётся работа, здесь появится настоящее описание.",
+      "tech": [],
+      "image": "",
+      "screenshots": [],
+      "versions": [],
+      "links": []
+    },
+    {
+      "id": "prism-hub",
+      "name": "Заглушка Hub",
+      "direction": "prism",
+      "status": "planned",
+      "flagship": false,
+      "short": "Проект в планах. Описание появится позже.",
+      "description": "Это заглушка: проект пока только в планах. Когда начнётся работа, здесь появится настоящее описание.",
+      "tech": [],
+      "image": "",
+      "screenshots": [],
+      "versions": [],
+      "links": []
+    },
+    {
+      "id": "prism-guard",
+      "name": "Заглушка Guard",
+      "direction": "prism",
+      "status": "planned",
+      "flagship": false,
+      "short": "Проект в планах. Описание появится позже.",
+      "description": "Это заглушка: проект пока только в планах. Когда начнётся работа, здесь появится настоящее описание.",
+      "tech": [],
+      "image": "",
+      "screenshots": [],
+      "versions": [],
       "links": []
     },
     {
       "id": "prism-panel",
-      "name": "PrismPanel",
+      "name": "Заглушка Panel",
       "direction": "prism",
       "status": "planned",
       "flagship": false,
-      "short": "Панель управления серверами Prism в браузере.",
-      "description": "PrismPanel позволит управлять серверами Prism прямо из браузера: статус, игроки, консоль и настройки.",
-      "tech": ["JavaScript", "Node.js"],
+      "short": "Проект в планах. Описание появится позже.",
+      "description": "Это заглушка: проект пока только в планах. Когда начнётся работа, здесь появится настоящее описание.",
+      "tech": [],
       "image": "",
       "screenshots": [],
       "versions": [],
@@ -96,13 +87,13 @@
     },
     {
       "id": "prism-host",
-      "name": "PrismHost",
+      "name": "Заглушка Host",
       "direction": "prism",
       "status": "planned",
       "flagship": false,
-      "short": "Хостинг для проектов Prism.",
-      "description": "PrismHost — инфраструктура, на которой будут жить серверы и сервисы Prism.",
-      "tech": ["Linux", "Docker"],
+      "short": "Проект в планах. Описание появится позже.",
+      "description": "Это заглушка: проект пока только в планах. Когда начнётся работа, здесь появится настоящее описание.",
+      "tech": [],
       "image": "",
       "screenshots": [],
       "versions": [],
@@ -112,11 +103,14 @@
       "id": "pronyxx-send",
       "name": "Pronyxx Send",
       "direction": "security",
-      "status": "dev",
+      "status": "planned",
       "flagship": false,
       "short": "Безопасная передача файлов и сообщений.",
       "description": "Pronyxx Send — сервис, чтобы безопасно отправить файл или сообщение: ссылка работает ограниченное время, а содержимое зашифровано.",
-      "tech": ["JavaScript", "Web Crypto API"],
+      "tech": [
+        "JavaScript",
+        "Web Crypto API"
+      ],
       "image": "",
       "screenshots": [],
       "versions": [],
@@ -130,7 +124,10 @@
       "flagship": false,
       "short": "Двухфакторная авторизация для аккаунтов.",
       "description": "Pronyxx 2FA добавляет второй шаг входа — одноразовый код. Даже если пароль украли, без кода войти не получится.",
-      "tech": ["TOTP", "JavaScript"],
+      "tech": [
+        "TOTP",
+        "JavaScript"
+      ],
       "image": "",
       "screenshots": [],
       "versions": [],
@@ -144,7 +141,10 @@
       "flagship": false,
       "short": "Защита сайтов и сервисов от атак.",
       "description": "Pronyxx Shield будет защищать сайты и сервисы студии от ботов и атак.",
-      "tech": ["Linux", "Nginx"],
+      "tech": [
+        "Linux",
+        "Nginx"
+      ],
       "image": "",
       "screenshots": [],
       "versions": [],
@@ -155,14 +155,23 @@
       "name": "Сайт The Pronyxx",
       "direction": "apps",
       "status": "live",
-      "flagship": false,
+      "flagship": true,
       "short": "Сайт студии — тот самый, на котором ты сейчас.",
       "description": "Сайт собирает все проекты студии в одном месте. Данные хранятся в JSON-файлах, чтобы потом их же читало мобильное приложение.",
-      "tech": ["HTML", "CSS", "JavaScript", "JSON"],
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "JSON"
+      ],
       "image": "",
       "screenshots": [],
       "versions": [
-        { "version": "0.4", "date": "2026-10-11", "notes": "Все страницы: главная, проекты, направления, новости, roadmap, о студии, контакты." }
+        {
+          "version": "0.4",
+          "date": "2026-10-11",
+          "notes": "Все страницы: главная, проекты, направления, новости, roadmap, о студии, контакты."
+        }
       ],
       "links": []
     },
@@ -173,8 +182,11 @@
       "status": "planned",
       "flagship": false,
       "short": "Карман студии для iPhone и Android.",
-      "description": "Мобильное приложение: новости, проекты, статус серверов Prism и уведомления. Начнём после сайта v1.0.",
-      "tech": ["React Native", "Expo"],
+      "description": "Мобильное приложение: новости, проекты, статус серверов и уведомления. Начнём после сайта v1.0.",
+      "tech": [
+        "React Native",
+        "Expo"
+      ],
       "image": "",
       "screenshots": [],
       "versions": [],

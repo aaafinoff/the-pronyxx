@@ -91,7 +91,8 @@
 /* ---------- Главная: цифры студии ---------- */
 .stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* auto-fit: счётчиков может быть два или три — они сами делят ширину поровну */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   text-align: center;
 }

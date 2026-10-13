@@ -1,19 +1,14 @@
 {
-  "_note": "ВРЕМЕННЫЙ roadmap-заглушка. Три колонки: done (сделано), now (сейчас), next (дальше). direction — id направления.",
+  "_note": "Три колонки: done (сделано), now (сейчас), next (дальше). direction — id направления.",
   "columns": [
     {
       "id": "done",
       "title": "Сделано",
       "items": [
         {
-          "title": "Prism Realm открыт",
+          "title": "PrismCore",
           "direction": "prism",
-          "text": "Сервер работает и принимает игроков."
-        },
-        {
-          "title": "PrismCore 1.0",
-          "direction": "prism",
-          "text": "Общее ядро для всех плагинов Prism."
+          "text": "Общее ядро для плагинов студии."
         },
         {
           "title": "Сайт студии",
@@ -27,19 +22,9 @@
       "title": "Сейчас",
       "items": [
         {
-          "title": "PrismHub",
+          "title": "Pronyxx Onyx",
           "direction": "prism",
-          "text": "Хаб, который соединит все режимы."
-        },
-        {
-          "title": "PrismVisuals",
-          "direction": "prism",
-          "text": "Эффекты и единый визуальный стиль."
-        },
-        {
-          "title": "Pronyxx Send",
-          "direction": "security",
-          "text": "Безопасная передача файлов."
+          "text": "Minecraft-сервер студии. Разработка начинается 15 октября 2026 года."
         }
       ]
     },
@@ -53,19 +38,19 @@
           "text": "Живая статистика, админка, API и свой домен."
         },
         {
-          "title": "Pronyxx 2FA и Shield",
+          "title": "Pronyxx Security",
           "direction": "security",
-          "text": "Двухфакторная авторизация и защита сервисов."
-        },
-        {
-          "title": "PrismPanel и PrismHost",
-          "direction": "prism",
-          "text": "Панель управления и хостинг."
+          "text": "Send, 2FA и Shield — сервисы безопасности, пока в планах."
         },
         {
           "title": "Мобильное приложение",
           "direction": "apps",
           "text": "The Pronyxx для iPhone и Android."
+        },
+        {
+          "title": "Остальные проекты Prism",
+          "direction": "prism",
+          "text": "Visuals, Hub, Guard, Panel и Host — пока в планах."
         }
       ]
     }
