@@ -143,11 +143,20 @@ def horizontal_logo():
         return
     text_left, text_right = min(text_cols), max(text_cols) + 1
 
+    # У буквы «T» слева тонкая перекладина — она тоньше порога и не попала в надпись.
+    # Идём от найденного края влево, пока в столбце есть хоть что-то светлое, и останавливаемся
+    # на тёмном промежутке между буквой и лучом (но не дальше 40 пикселей).
+    thin = 255 * 2 / (band * 2)
+    for _ in range(40):
+        if columns.getpixel((text_left - 1, 0)) < thin:
+            break
+        text_left -= 1
+
     rgb = image.convert("RGB")
     canvas_h = 160
     mid = canvas_h // 2          # на этой высоте идёт луч
     flare = crystal_h // 10      # блики по бокам кристалла
-    tail_w, gap_w, end_w = 56, 34, 12  # луч слева, луч между кристаллом и надписью, отступ справа
+    tail_w, gap_w, end_w = 56, 56, 12  # луч слева, промежуток между кристаллом и надписью, отступ справа
 
     # Кристалл уменьшаем так, чтобы он занял всю высоту
     crystal = rgb.crop((c_left - flare, c_top - pad, c_right + flare, c_bottom + pad))
@@ -170,9 +179,18 @@ def horizontal_logo():
         area = (x, y, x + piece.width, y + piece.height)
         canvas.paste(ImageChops.lighter(canvas.crop(area), piece), area)
 
+    def fade_out_right(piece):
+        """Плавно гасит кусок к правому краю — луч растворяется, а не упирается в букву."""
+        row = Image.new("L", (piece.width, 1))
+        for x in range(piece.width):
+            row.putpixel((x, 0), round(255 * (1 - x / piece.width) ** 2))
+        mask = row.resize(piece.size)
+        return ImageChops.multiply(piece, Image.merge("RGB", (mask, mask, mask)))
+
     crystal_right_x = crystal_x + crystal.width - round(flare * k)
     put(beam(c_left - crystal_h, c_left - flare, tail_w), 0, mid - band)
-    put(beam(c_right + flare, text_left - 4, text_x - crystal_right_x), crystal_right_x, mid - band)
+    # Луч справа от кристалла гаснет задолго до надписи, иначе он сливается с буквой «T»
+    put(fade_out_right(beam(c_right + flare, min(c_right + flare + crystal_h // 2, text_left - 8), gap_w - 22)), crystal_right_x, mid - band)
     put(crystal, crystal_x, 0)
     put(text, text_x, mid - band)
 

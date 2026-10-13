@@ -53,11 +53,12 @@ function renderHeader(active) {
     el(
       "div",
       { class: "container site-header__inner" },
-      // width и height — настоящий размер файла: браузер заранее знает пропорции, и страница не «прыгает»
+      // width и height — настоящий размер файла: браузер заранее знает пропорции, и страница не «прыгает».
+      // ?v=2 — номер версии картинки: когда меняешь файл, увеличь число, и браузеры скачают новый, а не возьмут старый из памяти
       el(
         "a",
         { class: "brand", href: "index.html" },
-        el("img", { src: "images/brand/logo-header.webp", alt: "The Pronyxx — на главную", width: "973", height: "160" }),
+        el("img", { src: "images/brand/logo-header.webp?v=2", alt: "The Pronyxx — на главную", width: "1009", height: "160" }),
       ),
       nav,
       burger,
