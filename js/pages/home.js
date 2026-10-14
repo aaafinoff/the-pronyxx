@@ -71,6 +71,8 @@ function renderCountdown(projects) {
           el("span", { class: "countdown__unit", text: pluralWord(days, "день", "дня", "дней") }),
         ),
         el("p", { class: "countdown__text", text: `до открытия ${upcoming.name} — ${formatDate(upcoming.launchDate)}` }),
+        // Подпись под отсчётом — поле launchNote в projects.json (если его нет, строчки не будет)
+        upcoming.launchNote ? el("p", { class: "countdown__note", text: upcoming.launchNote }) : null,
       ),
     ),
   );

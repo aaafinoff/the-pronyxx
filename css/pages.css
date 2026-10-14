@@ -95,6 +95,15 @@
   font-size: 1.05rem;
 }
 
+.card .countdown__note {
+  max-width: 46ch;
+  margin: 18px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-style: italic;
+}
+
 /* ---------- Страница 404 ---------- */
 .not-found {
   display: grid;

@@ -1,5 +1,5 @@
 {
-  "_note": "Поля: status = live | dev | planned; flagship = показывать на главной; image и screenshots = пути к картинкам, например images/projects/pronyxx-onyx.webp (пусто = заглушка «скоро»); launchDate = дата открытия \"ГГГГ-ММ-ДД\" (необязательно): пока она не наступила, на главной идёт обратный отсчёт; links = [{ \"label\": \"...\", \"url\": \"https://...\" }]. Проекты «Заглушка ...» — места под будущие проекты Prism.",
+  "_note": "Поля: status = live | dev | planned; flagship = показывать на главной; image и screenshots = пути к картинкам, например images/projects/pronyxx-onyx.webp (пусто = заглушка «скоро»); launchDate = дата открытия \"ГГГГ-ММ-ДД\" (необязательно): пока она не наступила, на главной идёт обратный отсчёт, а launchNote — подпись под ним; links = [{ \"label\": \"...\", \"url\": \"https://...\" }]. Проекты «Заглушка ...» — места под будущие проекты Prism.",
   "projects": [
     {
       "id": "pronyxx-onyx",
@@ -14,7 +14,8 @@
       "screenshots": [],
       "versions": [],
       "links": [],
-      "launchDate": "2027-07-01"
+      "launchDate": "2027-07-01",
+      "launchNote": "Всё это время мы усердно работаем и искренне стараемся создать что-то новое и лучшее."
     },
     {
       "id": "prism-core",
