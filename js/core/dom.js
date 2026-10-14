@@ -75,12 +75,26 @@ export function formatDate(iso) {
 
 /** Правильное окончание слова: plural(5, "проект", "проекта", "проектов") → "5 проектов" */
 export function plural(n, one, few, many) {
+  return `${n} ${pluralWord(n, one, few, many)}`;
+}
+
+/** То же, но только слово: pluralWord(260, "день", "дня", "дней") → "дней" */
+export function pluralWord(n, one, few, many) {
   const mod10 = n % 10;
   const mod100 = n % 100;
-  let word = many;
-  if (mod10 === 1 && mod100 !== 11) word = one;
-  else if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) word = few;
-  return `${n} ${word}`;
+  if (mod10 === 1 && mod100 !== 11) return one;
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
+  return many;
+}
+
+/** Сколько полных дней осталось до даты "2027-07-01". Сегодня → 0, прошедшая дата → отрицательное число. */
+export function daysUntil(iso) {
+  const target = new Date(`${iso}T00:00:00`);
+  if (Number.isNaN(target.getTime())) return NaN;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  // Math.round, а не floor: при переводе часов в сутках бывает 23 или 25 часов
+  return Math.round((target - today) / 86400000);
 }
 
 /** Показывает сообщение в блоке (например «ничего не найдено»). */

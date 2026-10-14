@@ -62,6 +62,66 @@
   gap: 12px;
 }
 
+/* ---------- Главная: обратный отсчёт до открытия ---------- */
+.section--tight {
+  padding-bottom: 0;
+}
+.countdown {
+  text-align: center;
+  padding: 34px 24px;
+}
+.countdown__line {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+}
+.countdown__num {
+  font-family: var(--font-head);
+  font-size: clamp(3rem, 12vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.countdown__unit {
+  font-family: var(--font-head);
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  font-weight: 500;
+}
+.card .countdown__text {
+  margin-top: 12px;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+}
+
+/* ---------- Страница 404 ---------- */
+.not-found {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - var(--header-h) - 200px);
+  padding: 60px 0;
+  text-align: center;
+}
+.not-found__crystal {
+  width: 150px;
+  margin: 0 auto 8px;
+  filter: drop-shadow(0 0 30px rgba(var(--glow), 0.25));
+}
+.not-found__code {
+  font-size: clamp(4rem, 18vw, 8rem);
+  line-height: 1;
+}
+.not-found__title {
+  margin-top: 10px;
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+}
+.not-found p {
+  margin: 14px auto 30px;
+  max-width: 42ch;
+  color: var(--muted);
+}
+
 /* ---------- Главная: карточки направлений ---------- */
 .direction-card {
   padding: 26px;
