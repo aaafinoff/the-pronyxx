@@ -16,7 +16,8 @@
 export function safeUrl(url) {
   if (typeof url !== "string" || url.trim() === "") return null;
   try {
-    const parsed = new URL(url, location.href);
+    // document.baseURI учитывает тег <base> (он есть на странице 404), а без него равен адресу страницы
+    const parsed = new URL(url, document.baseURI);
     if (parsed.protocol === "https:" || parsed.protocol === "mailto:") return parsed.href;
     if (parsed.origin === location.origin) return parsed.href;
   } catch {
