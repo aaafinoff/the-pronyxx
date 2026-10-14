@@ -1,8 +1,8 @@
-// Страница одного проекта: описание, скриншоты, технологии, история версий, ссылки.
+// Страница одного проекта: описание, скриншоты, технологии, история версий, девлоги, ссылки.
 
 import { el, externalLink, formatDate, getIdParam, notice, safeUrl } from "../core/dom.js";
-import { getDirections, getProjects } from "../core/data.js";
-import { directionName, statusBadge, thumb } from "../core/components.js";
+import { getDirections, getNews, getProjects } from "../core/data.js";
+import { directionName, newsCard, statusBadge, thumb } from "../core/components.js";
 import { initLayout, refreshEffects, showError } from "../core/layout.js";
 
 /** Блок с заголовком. Если содержимого нет — блок не показываем вообще. */
@@ -13,7 +13,7 @@ function block(title, content) {
 
 async function main() {
   await initLayout("projects");
-  const [directions, projects] = await Promise.all([getDirections(), getProjects()]);
+  const [directions, projects, news] = await Promise.all([getDirections(), getProjects(), getNews()]);
 
   const main = document.getElementById("main");
   const project = projects.find((p) => p.id === getIdParam());
@@ -35,6 +35,8 @@ async function main() {
   const hasScreenshots = project.screenshots?.length > 0;
   const screenshots = hasScreenshots ? project.screenshots : [""];
   const links = (project.links ?? []).filter((link) => safeUrl(link.url));
+  // Новости и девлоги, у которых в news.json указан этот проект (поле "project")
+  const projectNews = news.filter((post) => post.project === project.id);
 
   main.replaceChildren(
     el(
@@ -80,6 +82,10 @@ async function main() {
               ),
             )
           : null,
+      ),
+      block(
+        "Новости и девлоги",
+        projectNews.length ? el("div", { class: "grid" }, projectNews.map(newsCard)) : null,
       ),
       block(
         "Ссылки",
