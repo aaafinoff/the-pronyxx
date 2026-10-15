@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/</loc><lastmod>2026-10-14</lastmod><priority>1.0</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/projects.html</loc><lastmod>2026-10-14</lastmod><priority>0.9</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/news.html</loc><lastmod>2026-10-14</lastmod><priority>0.8</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/roadmap.html</loc><lastmod>2026-10-14</lastmod><priority>0.7</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/about.html</loc><lastmod>2026-10-14</lastmod><priority>0.7</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/contacts.html</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/direction.html?id=prism</loc><lastmod>2026-10-14</lastmod><priority>0.7</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/direction.html?id=security</loc><lastmod>2026-10-14</lastmod><priority>0.7</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/direction.html?id=apps</loc><lastmod>2026-10-14</lastmod><priority>0.7</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=pronyxx-onyx</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-core</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-visuals</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-hub</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-guard</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-panel</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-host</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=pronyxx-send</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=pronyxx-2fa</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=pronyxx-shield</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
-  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=pronyxx-site</loc><lastmod>2026-10-14</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/</loc><lastmod>2026-10-15</lastmod><priority>1.0</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/projects.html</loc><lastmod>2026-10-15</lastmod><priority>0.9</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/news.html</loc><lastmod>2026-10-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/roadmap.html</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/about.html</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/contacts.html</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/direction.html?id=prism</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/direction.html?id=security</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/direction.html?id=apps</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=pronyxx-onyx</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-core</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-visuals</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-hub</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-guard</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-panel</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=prism-host</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=pronyxx-send</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=pronyxx-2fa</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=pronyxx-shield</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/project.html?id=pronyxx-site</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://aaafinoff.github.io/the-pronyxx/post.html?id=onyx-devlog-1</loc><lastmod>2026-10-15</lastmod><priority>0.5</priority></url>
   <url><loc>https://aaafinoff.github.io/the-pronyxx/post.html?id=onyx-start</loc><lastmod>2026-10-13</lastmod><priority>0.5</priority></url>
   <url><loc>https://aaafinoff.github.io/the-pronyxx/post.html?id=site-launch</loc><lastmod>2026-10-11</lastmod><priority>0.5</priority></url>
   <url><loc>https://aaafinoff.github.io/the-pronyxx/post.html?id=devlog-prism-style</loc><lastmod>2026-10-05</lastmod><priority>0.5</priority></url>
